@@ -13,6 +13,12 @@ defined('MOODLE_INTERNAL') || die();
 // $CFG->debug = (E_ALL | E_STRICT);   // === DEBUG_DEVELOPER - NOT FOR PRODUCTION SERVERS!
 // $CFG->debugdisplay = 1;
 
+require_login(null, false);
+//require_capability('moodle/site:config', context_system::instance());
+
+//require_capability('moodle/site:config', get_context_instance(CONTEXT_SYSTEM));
+
+
 function listaAll(){
 	global $DB;
 	global $CFG;
